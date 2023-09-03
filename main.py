@@ -1,8 +1,12 @@
 # todos = []
 # from functions import get_todos, write_todos
 import functions
+import time
 
+now = time.strftime("%b %d, %Y %H:%M:%S")
+print(f'Today is {now}')
 while True:
+
     user_action: str = input('Type add, edit, show, done or exit: ').strip()  # Remove extra spaces
     if user_action.startswith('add'):
         todo = user_action[4:]
